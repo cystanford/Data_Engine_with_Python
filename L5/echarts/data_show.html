@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+
+<div id="main" style="width: 1000px; height: 500px;">
+</div>
+
+<script src="echarts.min.js"></script>
+<script type="text/javascript">
+    // 基于准备好的dom，初始化echarts实例
+    var myChart = echarts.init(document.getElementById('main'));
+
+    // 指定图表的配置项和数据
+    var option = {
+        title: {
+            text: '累计确诊国家 Top10'
+        },
+        tooltip: {},
+        legend: {
+            data:['累计确诊']
+        },
+        xAxis: {
+            data: ["美国","巴西","俄罗斯", "西班牙", "英国","意大利","法国","德国","土耳其","伊朗"]
+        },
+
+        yAxis: {},
+        series: [{
+            name: '新增',
+            type: 'bar',
+            data: [1666828, 347398, 335882, 281904, 258504, 229327, 182036, 179986, 155686, 133521]
+        }]
+    };
+
+    // 使用刚指定的配置项和数据显示图表。
+    myChart.setOption(option);
+</script>
+</html>
