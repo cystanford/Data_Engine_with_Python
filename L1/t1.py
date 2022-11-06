@@ -1,5 +1,5 @@
-# 输入与输出
+# 输入输出
 name = input("What's your name?")
 sum = 100+100
-print ('hello,%s' %name)
-print ('sum = %d' %sum)
+print ('hello', name)
+print ('sum', sum)
